@@ -13,7 +13,7 @@ while y == 'y' or y == 'Y':  # If you say either of those at the end, you get ba
     while count < math.log(1000 - 1 + 1, 2):  # While count is smaller than 10, add 1 and guess again.
         count += 1
 
-        guess = int(input("Starts guessing! If you'd wish to stop playing, type either N or n."))
+        guess = int(input("Starts guessing! If you'd wish to stop playing, type either N or n. "))
         if guess == "n" or guess == "N":  # So you can instantly stop playing or go on.
             break
 # If you've guessed the random number, since x is the random number, you win. Also showcased how many tries it took
@@ -29,8 +29,18 @@ while y == 'y' or y == 'Y':  # If you say either of those at the end, you get ba
         # up though. Since you got a max of 10 guesses. [which is "count" I think]
         elif x > guess:
             print("Too low! Try a bit higher! ")
+            near = x - guess
+            if near <= 50:
+                print("You're near! Only 1-50 away!")
+            elif near <= 20:
+                print("You're very near! Only 1-20 away!")
         elif x < guess:
             print("Too high! Try a bit lower!")
+            near = x - guess
+            if near <= 20:
+                print("You're very near! Only 1-20 away!")
+            elif near <= 50:
+                print("You're near! Only 1-50 away!")
     if count >= math.log(1000 - 1 + 1, 2):
         print("The number was %d" % x)
         Round = Round + 1
