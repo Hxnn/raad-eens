@@ -8,9 +8,9 @@ while y == 'y' or y == 'Y':  # If you say either of those at the end, you get ba
     print("You have a maximum of 10 tries to guess the number! This is round:", Round)  # I had to show which round
     # you're on, so this shows that.
 
-    count = 0  # How many times you've guessed I think? Google helped me.
+    count = 0  # How many times you've guessed.
 
-    while count < math.log(1000 - 1 + 1, 2):  # Honestly, idk what this means I saw it on Google. Same for line 14.
+    while count < math.log(1000 - 1 + 1, 2):  # While count is smaller than 10, add 1 and guess again.
         count += 1
 
         guess = int(input("Starts guessing! If you'd wish to stop playing, type either N or n."))
