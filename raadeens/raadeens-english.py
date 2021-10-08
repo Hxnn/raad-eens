@@ -26,7 +26,7 @@ while y == 'y' or y == 'Y':  # If you say either of those at the end, you get ba
             print("You have", Points, " Points!")
             break
 # If you either guessed too high or too low, it'll tell you but you can keep on playing. The ammount of guesses goes
-        # up though. Since you got a max of 10 guesses. [which is "count" I think]
+    # up though. Since you got a max of 10 guesses. It'll also tell you if you're near/very near based on your guess.
         elif x > guess:
             print("Too low! Try a bit higher! ")
             near = x - guess
