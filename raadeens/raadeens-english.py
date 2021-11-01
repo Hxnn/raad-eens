@@ -10,7 +10,7 @@ while y == 'y' or y == 'Y':  # If you say either of those at the end, you get ba
 
     count = 0  # How many times you've guessed.
 
-    while count < math.log(1000 - 1 + 1, 2):  # While count is smaller than 10, add 1 and guess again.
+    while count < math.log(1000 - 1 + 1, 2):
         count += 1
 
         guess = int(input("Starts guessing! If you'd wish to stop playing, type either N or n. "))
