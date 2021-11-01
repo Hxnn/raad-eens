@@ -7,12 +7,9 @@ while y == 'y' or y == 'Y':  # If you say either of those at the end, you get ba
     x = random.randint(1, 1000)  # X is a random number between 1 and 1000.
     print("You have a maximum of 10 tries to guess the number! This is round:", Round)  # I had to show which round
     # you're on, so this shows that.
-
     count = 0  # How many times you've guessed.
-
     while count < math.log(1000 - 1 + 1, 2):
         count += 1
-
         guess = int(input("Starts guessing! If you'd wish to stop playing, type either N or n. "))
         if guess == "n" or guess == "N":  # So you can instantly stop playing or go on.
             break
@@ -45,7 +42,7 @@ while y == 'y' or y == 'Y':  # If you say either of those at the end, you get ba
         print("The number was %d" % x)
         Round = Round + 1
         print("You have", Points, " Points!")
-    if Points or Round == 20:
+    if Points == 20:
         break
     y = input("Would you like to play again? If so, write either Y or y. If you wish to stop playing, type either N "
               "or n. ")
